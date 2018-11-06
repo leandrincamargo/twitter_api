@@ -20,7 +20,7 @@ router.get('/', function (req, res, next) {
       });
     });
   } else // Se não abre a pagina de login
-    res.boom.notAcceptable('Usuário nao autenticado!');
+    res.boom.unauthorized('Usuário nao autenticado!');
 });
 
 // GET todos os tweets do usuario ID
@@ -42,7 +42,7 @@ router.get('/user/:id', function (req, res) {
         res.boom.notFound("Usuario nao encontrado");
     });
   } else
-    res.boom.notAcceptable("Usuário nao autenticado!");
+    res.boom.unauthorized("Usuário nao autenticado!");
 });
 
 /* GET o tweet pelo ID */
@@ -61,7 +61,7 @@ router.get('/tweet/:id', function (req, res) {
         res.boom.notFound("Tweet nao encontrado");
     });
   } else 
-    res.boom.notAcceptable("Usuário nao autenticado!");
+    res.boom.unauthorized("Usuário nao autenticado!");
 });
 
 /* GET todos os comentarios no tweet ID */
@@ -84,7 +84,7 @@ router.get('/tweet/:id/comments', function (req, res) {
         res.boom.notFound("Tweet nao encontrado");
     });
   } else 
-    res.boom.notAcceptable("Usuário nao autenticado!");
+    res.boom.unauthorized("Usuário nao autenticado!");
 });
 
 // GET o usuario por ID e verifica se está seguindo-o
@@ -116,7 +116,7 @@ router.get('/user/:id/seguir', function (req, res) {
       });
     }
   } else 
-    res.boom.notAcceptable("Usuário nao autenticado!");
+    res.boom.unauthorized("Usuário nao autenticado!");
 });
 
 // POST para seguir o usuario ID
@@ -150,7 +150,7 @@ router.post('/user/:id/seguir', function (req, res) {
       });
     }
   } else 
-    res.boom.notAcceptable("Usuario nao autenticado!");
+    res.boom.unauthorized("Usuario nao autenticado!");
 });
 
 // POST o comentario no tweet ID
@@ -189,7 +189,7 @@ router.post('/tweet/:id', function (req, res, next) {
         res.boom.notFound("Tweet nao encontrado");
     });
   } else 
-    res.boom.notAcceptable("Usuário nao autenticado!");
+    res.boom.unauthorized("Usuário nao autenticado!");
 });
 
 // POST um novo tweet
@@ -208,7 +208,7 @@ router.post('/', function (req, res, next) {
       }
     });
   } else 
-    res.boom.notAcceptable("Usuario nao autenticado!");
+    res.boom.unauthorized("Usuario nao autenticado!");
 });
 
 module.exports = router;
