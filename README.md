@@ -22,16 +22,15 @@ Utilizado NodeJS e MongoDB
 ## Build Setup
 
 ``` bash
-# instalar dependências
+# instalar dependÃªncias
 npm install
 
 # servir com hot reload em localhost:8080
 npm start
 ```
 
-## Licença
-* Proprietária
+## LicenÃ§a
+* ProprietÃ¡ria
 
 ## Contato
-* Email: [leandrocamaargo@hotmail.com](mailto:leandrocamaargo@hotmail.com)
 * Linkedin: [Leandro Camargo da Veiga](https://br.linkedin.com/in/leandro-camargo-da-veiga-7b135810b)
