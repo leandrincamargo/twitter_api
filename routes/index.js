@@ -13,7 +13,8 @@ router.get('/', function (req, res, next) {
     }, function (err, result) {
       var seguindo = result.follow;
       Tweet.find({
-        author: [req.session.login, seguindo]
+        // author: [req.session.login, seguindo]
+        author: req.session.login
       }, function (err, result) {
         if (err) throw err;
         res.json(result);
